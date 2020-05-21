@@ -1,11 +1,22 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+    <!-- Если используем vuetify все должно быть
+      обернуто в тэг <v-app> -->
+    <v-app>
+        <v-row class="fill-height">
+            <v-list-item>
+                <v-list-item-content>
+                    <v-list-item-title>
+                        <router-link to="/home">Home</router-link>
+                    </v-list-item-title>
+                </v-list-item-content>
+                <v-list-item-content>
+                    <v-list-item-title>
+                        <router-link to="/about">About</router-link>
+                    </v-list-item-title>
+                </v-list-item-content>
+            </v-list-item>
+        </v-row>
+    </v-app>
 </template>
 
 <style lang="scss">
