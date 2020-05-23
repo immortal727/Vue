@@ -1,24 +1,41 @@
 <template>
-    <!-- ≈ÒÎË ËÒÔÓÎ¸ÁÛÂÏ vuetify ‚ÒÂ ‰ÓÎÊÌÓ ·˚Ú¸
-      Ó·ÂÌÛÚÓ ‚ Ú˝„ <v-app> -->
-    <v-app>
-        <v-row class="fill-height">
-            <v-list-item>
-                <v-list-item-content>
-                    <v-list-item-title>
-                        <router-link to="/home">Home</router-link>
-                    </v-list-item-title>
-                </v-list-item-content>
-                <v-list-item-content>
-                    <v-list-item-title>
-                        <router-link to="/about">About</router-link>
-                    </v-list-item-title>
-                </v-list-item-content>
-            </v-list-item>
-        </v-row>
-    </v-app>
+  <v-app>
+    <v-row class="fill-height">
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title>
+            <router-link to="/home">Home</router-link>
+          </v-list-item-title>
+        </v-list-item-content>
+        <v-list-item-content>
+          <v-list-item-title>
+            <router-link to="/about">About</router-link>
+          </v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+    </v-row>
+    <!-- todos (–ø–µ—Ä–≤–æ–π –∑–Ω–∞—á–µ–Ω–∏–µ) - –ø–µ—Ä–µ–º–µ–Ω–Ω–∞—è, –∫–æ—Ç–æ—Ä–∞—è –ø—Ä–∏–Ω–∏–º–∞–µ—Ç –º–∞—Å—Å–∏–≤-->
+    <TodoList v-bind:todos="todos" />
+  </v-app>
 </template>
-
+<script>
+import TodoList from "@/components/TodoList";
+export default {
+  name: "App",
+  data() {
+    return {
+      todos: [
+        { id: 1, title: "–ö—É–ø–∏—Ç—å —Ö–ª–µ–±", completed: false },
+        { id: 2, title: "–ö—É–ø–∏—Ç—å –º–∞—Å–ª–æ", completed: false },
+        { id: 3, title: "–ö—É–ø–∏—Ç—å –ø–∏–≤–æ", completed: false }
+      ]
+    };
+  },
+  components: {
+    TodoList
+  }
+};
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
