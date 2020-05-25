@@ -1,5 +1,5 @@
 <template>
-  <li>TodoItem</li>
+  <li>{{todo.title}}</li>
 </template>
 <script>
 export default {
