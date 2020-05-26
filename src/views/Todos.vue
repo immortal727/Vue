@@ -57,13 +57,13 @@ export default {
     // Функция filteredTodos используется как простая переменная
     filteredTodos() {
       if (this.filter === "all") {
-        return this.toodos;
+        return this.todos;
       }
       if (this.filter === "completed") {
-        return this.toodos.filter(t => t.completed);
+        return this.todos.filter(t => t.completed);
       }
       if (this.filter === "not-complited") {
-        return this.toodos.filter(t => !t.completed);
+        return this.todos.filter(t => !t.completed);
       }
     }
   },
